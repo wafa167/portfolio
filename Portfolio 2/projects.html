@@ -1,0 +1,195 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Projects</title>
+    <style>
+        :root {
+            --bg-dark: #0b0f1a;
+            --bg-panel: rgba(18, 24, 38, 0.9);
+            --bg-card: rgba(255, 255, 255, 0.06);
+            --text-main: #f5f7ff;
+            --text-soft: #d5dbea;
+            --accent: #ffe9a3;
+            --accent-2: #7dd3fc;
+            --border: rgba(255, 255, 255, 0.12);
+            --shadow: 0 20px 45px rgba(0, 0, 0, 0.45);
+        }
+
+        * {
+            box-sizing: border-box;
+        }
+
+        body {
+            margin: 0;
+            min-height: 100vh;
+            font-family: Arial, sans-serif;
+            background: linear-gradient(135deg, #0b0f1a 0%, #171d2d 40%, #090d16 100%);
+            color: var(--text-main);
+        }
+
+        .page-shell {
+            max-width: 1200px;
+            margin: 0 auto;
+            padding: 48px 20px 80px;
+        }
+
+        .projects-header {
+            text-align: center;
+            margin-bottom: 40px;
+        }
+
+        .projects-header h1 {
+            margin: 0;
+            font-size: clamp(2.2rem, 4vw, 4rem);
+            letter-spacing: 0.04em;
+        }
+
+        .projects-header p {
+            margin: 14px auto 0;
+            max-width: 700px;
+            color: var(--text-soft);
+            font-size: 1.05rem;
+            line-height: 1.7;
+        }
+
+        .projects-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(260px, 1fr));
+            gap: 28px;
+        }
+
+        .project-card {
+            background: var(--bg-card);
+            border: 1px solid var(--border);
+            border-radius: 22px;
+            overflow: hidden;
+            box-shadow: var(--shadow);
+            transition: transform 0.3s ease, box-shadow 0.3s ease, border-color 0.3s ease;
+            backdrop-filter: blur(8px);
+        }
+
+        .project-card:hover {
+            transform: translateY(-8px);
+            box-shadow: 0 28px 55px rgba(0, 0, 0, 0.52);
+            border-color: rgba(125, 211, 252, 0.5);
+        }
+
+        .project-card img {
+            display: block;
+            width: 100%;
+            height: 220px;
+            object-fit: cover;
+            border-bottom: 1px solid var(--border);
+        }
+
+        .project-content {
+            padding: 20px 18px 22px;
+        }
+
+        .project-badge {
+            display: inline-block;
+            margin-bottom: 12px;
+            padding: 7px 12px;
+            border-radius: 999px;
+            background: rgba(255, 233, 163, 0.12);
+            border: 1px solid rgba(255, 233, 163, 0.35);
+            color: var(--accent);
+            font-size: 0.72rem;
+            font-weight: 700;
+            letter-spacing: 0.08em;
+            text-transform: uppercase;
+        }
+
+        .project-card h2 {
+            margin: 0 0 12px;
+            font-size: 1.45rem;
+            line-height: 1.35;
+        }
+
+        .project-card p {
+            margin: 0 0 18px;
+            color: var(--text-soft);
+            line-height: 1.7;
+            font-size: 0.98rem;
+        }
+
+        .project-link {
+            display: inline-block;
+            padding: 11px 18px;
+            border-radius: 12px;
+            background: linear-gradient(135deg, var(--accent), #f7c86d);
+            color: #111827;
+            text-decoration: none;
+            font-weight: 700;
+            transition: transform 0.25s ease, box-shadow 0.25s ease;
+            box-shadow: 0 8px 18px rgba(255, 233, 163, 0.25);
+        }
+
+        .project-link:hover {
+            transform: translateY(-2px);
+            box-shadow: 0 12px 22px rgba(255, 233, 163, 0.38);
+        }
+
+        @media (max-width: 640px) {
+            .page-shell {
+                padding-left: 16px;
+                padding-right: 16px;
+            }
+
+            .projects-header {
+                margin-bottom: 28px;
+            }
+
+            .project-card img {
+                height: 200px;
+            }
+
+            .project-content {
+                padding: 18px 16px 20px;
+            }
+        }
+    </style>
+</head>
+<body>
+    <div class="page-shell">
+        <header class="projects-header">
+            <h1>View My Projects</h1>
+            <p>Explore a collection of web experiences blending creativity, technology, and user-focused design.</p>
+        </header>
+
+        <main class="projects-grid">
+            <article class="project-card">
+                <img src="images/Al-Ma'rifah.png" alt="Al-Ma'rifah Project Image">
+                <div class="project-content">
+                    <span class="project-badge">Web</span>
+                    <h2>Al-Ma'rifah – Islamic Knowledge Platform</h2>
+                    <p>A responsive Islamic learning platform designed to provide easy access to Quranic resources, Hadith collections, e-books, and educational videos through a clean and user-friendly interface.</p>
+                    <a class="project-link" href="https://wafa167.github.io/al-ilm/" target="_blank" rel="noreferrer">View Project</a>
+                </div>
+            </article>
+
+            <article class="project-card">
+                <img src="images/EduAI.png" alt="EduAI Project Image">
+                <div class="project-content">
+                    <span class="project-badge">AI</span>
+                    <h2>EduAI – AI-Powered Learning Platform</h2>
+                    <p>A web-based educational platform that combines interactive learning resources with AI-powered features to support students in understanding concepts and improving their learning experience.</p>
+                    <a class="project-link" href="https://wfafa-eduai.hf.space/" target="_blank" rel="noreferrer">View Project</a>
+                </div>
+            </article>
+
+            <article class="project-card">
+                <img src="images/Mental-Health-Clinic.png" alt="Mental Health Clinic Project Image">
+                <div class="project-content">
+                    <span class="project-badge">Healthcare</span>
+                    <h2>Mental Health Clinic Website</h2>
+                    <p>A thoughtful healthcare website designed for a modern clinic experience, with clear service information and a comforting, professional presentation.</p>
+                    <a class="project-link" href="https://wafa167.github.io/mind-balance/">View Project</a>
+                </div>
+            </article>
+        </main>
+    </div>
+</body>
+</html>
