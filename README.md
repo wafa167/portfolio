@@ -1,0 +1,1 @@
+Hi, I'm Wafa — a passionate Web Developer and aspiring AI/ML Engineer. I enjoy creating responsive, interactive, and user-friendly websites while continuously exploring new technologies. I’m currently pursuing a Diploma in ICT and have completed a Web Development course, with hands-on experience in HTML, CSS, JavaScript, Node.js, and Python.
